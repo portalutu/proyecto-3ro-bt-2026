@@ -238,7 +238,7 @@ reclamos-comuna-maragata/
     4. php artisan serve
 
     ### Frontend
-    Abrir index.html o ejecutar con servidor local.
+    Abrir index.html o ejecutar con servidor local
 
     ## Estructura del proyecto
-    Ver carpeta /docs para documentación completa.
+    Ver carpeta /docs para documentación completa
