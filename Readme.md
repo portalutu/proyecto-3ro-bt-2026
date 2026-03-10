@@ -121,10 +121,11 @@ Tablas sugeridas:
 
 **Roles minimos por equipo
 
-* Equipo sugerido: 4 integrantes
+* Equipo sugerido: 5 integrantes
   * Líder de proyecto
   * Desarrollador Backend
   * Desarrollador/es Frontend
+  * Seguridad / Frontend
 
 * Gestión Git / Entregas
   * 1 repositorio por grupo
