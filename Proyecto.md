@@ -79,12 +79,12 @@ Aplicación móvil progresiva para:
   * Almacenamiento en filesystem
   * API REST
 
-* Endpoints mínimos
+* Endpoints mínimos:
 
 * Autenticación
     POST /auth/register
     POST /auth/login
-    POST /auth/verify-ci
+    POST /auth/verify-ci (uso exclusivo durante el alta de un nuevo ciudadano)
 * Reclamos
     POST /reclamos
     GET /reclamos/my
@@ -205,7 +205,7 @@ reclamos-comuna-maragata/
 │   ├── 03-api.md
 │   ├── 04-seguridad.md
 │   ├── 05-planificacion.md
-│   └──  06-testing.md
+│   └── 06-testing.md
 │
 ├── .gitignore
 ├── LICENSE
@@ -243,3 +243,36 @@ reclamos-comuna-maragata/
 
     ## Estructura del proyecto
     Ver carpeta /docs para documentación completa
+
+
+## Apéndice 1: API docente de validación de identidad
+
+Como parte del proyecto, el cuerpo docente proveerá una API externa, escrita en Python, que simulará un servicio gubernamental de validación de identidad.
+
+Esta API tendrá dos objetivos:
+
+* Validar si un documento de identidad presentado es "verdadero" dentro del entorno de prueba (usando el algoritmo público de validación de CI).
+* Cotejar que el "ciudadano de prueba" corresponda a uno de los documentos previamente registrados por el equipo docente (las CIs de los estudiantes del grupo estará precargada en un documento JSON que hará las veces de base de datos, para simular comportamiento de GUB.UY).
+
+Su propósito es emular el comportamiento de APIs estatales o gubernamentales que ayudan a prevenir fraudes, suplantaciones de identidad y ataques a la plataforma mediante documentos falsos o inventados.
+
+La integración con esta API será obligatoria en el proceso de alta de ciudadanía, pero no se espera que los equipos realicen validaciones de identidad en cada denuncia o reclamo. La validación deberá ejecutarse solamente cuando se registre un nuevo ciudadano de prueba.
+
+Endpoints esperados de la API docente:
+
+* `POST /api/identidad/validar-documento`
+  * Recibe número de documento y datos mínimos de identidad.
+  * Responde si el documento es válido dentro del entorno de pruebas.
+* `POST /api/identidad/validar-ciudadano`
+  * Recibe número de documento y datos del ciudadano de prueba.
+  * Responde si la persona coincide con un registro previamente cargado por el cuerpo docente.
+* `GET /api/identidad/ciudadanos/{documento}`
+  * Permite consultar el estado de validación de un documento ya registrado.
+  * Puede usarse para verificar si el ciudadano ya fue validado previamente por el backend del grupo.
+
+Consideraciones de integración:
+
+* Cada grupo deberá consumir esta API desde su backend, no directamente desde el frontend.
+* El backend del grupo deberá registrar el resultado de la validación al momento de crear un nuevo ciudadano.
+* Si la identidad no valida, el sistema no deberá habilitar el alta del ciudadano, pero si registrar el intento fraudulento de registro de un ciudadano.
+* Una vez validado el ciudadano, los reclamos posteriores podrán crearse sin repetir esta validación de identidad.
