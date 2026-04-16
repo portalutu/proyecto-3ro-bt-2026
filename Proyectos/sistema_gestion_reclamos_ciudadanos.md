@@ -16,7 +16,7 @@ Este trabajo integra competencias técnicas, metodológicas y ciudadanas alinead
 * Diseño, desarrollo y documentación de sistemas.
 * Tratamiento ético y responsable de datos personales.
 
-## Público objetivo: Comuna Maragata. (Donación del Polo Tecnológico San José)
+## Público objetivo: Comuna Maragata(???)
 
 ## 1. Fundamentación del Proyecto
 
@@ -58,6 +58,18 @@ Aplicación móvil progresiva para:
   * Aprobación o rechazo
   * Reportes estadísticos básicos (duración de trabajos, trabajos sin resolver, plazos, incumplimientos, cantidad de reclamos x equipo/proveedor, etc.)
 
+**Frontend Equipos / Proveedores
+
+* Interfaz simple para:
+
+  * Visualizar tareas asignadas
+  * Marcar inicio
+    * Registrar finalización con:
+      * Materiales utilizados
+      * Observaciones
+      * Evidencias fotográficas
+    * Solucionar tareas rechazadas con prioridad
+
 **Backend
 
 * Tecnologías
@@ -94,6 +106,8 @@ Tablas sugeridas:
 * reclamos
 * historial_actividad (cambios de estados)
 * multimedia (documentos vinculados a cada reclamo)
+* proveedores (o equipos internos de trabajo)
+* materiales (opcional)
 
 ## 4. Requisitos No Funcionales
 
@@ -101,7 +115,7 @@ Tablas sugeridas:
 * Validación de entradas
 * Historial completo de estados
 * Protección de datos personales
-* Usabilidad móvil (diseño mobile first)
+* Usabilidad móvil (mobile first) ???
 
 ## 5. Organización del Trabajo
 
@@ -168,6 +182,12 @@ reclamos-comuna-maragata/
 │   └── README.md
 │
 ├── frontend-ciudadania/
+│   ├── index.html
+│   ├── css/
+│   ├── js/
+│   └── manifest.json
+│
+├── frontend-proveedores/
 │   ├── index.html
 │   ├── css/
 │   ├── js/
