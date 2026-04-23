@@ -107,7 +107,7 @@ Backend centralizado encargado de la lógica del negocio, la persistencia de dat
 
 Tecnologías:
 
-* PHP / Laravel
+* PHP 
 * MySQL
 * Almacenamiento en filesystem
 * API REST
