@@ -13,6 +13,14 @@ La entrega final del proyecto deberá ser en medio impreso por asignatura, respa
 * Acta de cierre
 
 ## Prog. Full-stack
+* Estructura del proyecto organizada en carpetas (frontend y backend separados)
+* Frontend desarrollado con HTML, CSS y JavaScript (jQuery)
+* Backend en PHP con conexión a base de datos MySQL e implementado como API REST.
+* Comunicación entre frontend y backend mediante AJAX
+* Implementación básicas de seguridad(Validación de datos,Hashing de contraseñas,etc)
+* Código ordenado y modular (separación en archivos, por ejemplo: controllers,services, models o similar)
+* Base de datos MySQL con schema definido (creación de tablas, relaciones y restricciones) mediante archivo .sql
+* Proyecto completamente dockerizado mediante archivo docker-compose.yml
 
 ## Adm. SSOO
 * Análisis de requerimientos
