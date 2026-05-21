@@ -31,7 +31,9 @@ La aplicación permitirá que el público general consulte anuncios vigentes, ac
 
 ### 2.1 Componentes
 
-**Frontend Público General (diseño mobile-first)
+**Frontend Público General
+
+Interfaz web responsive, pensada para uso en computadora, tablet o celular.
 
 Aplicación web simple para:
 
@@ -55,7 +57,9 @@ Aplicación web simple para:
 * Visualización de materiales de estudio.
 * Consulta de preguntas frecuentes.
 
-**Dashboard IMSJ (diseño desktop-first, responsive)
+**Dashboard IMSJ
+
+Interfaz web responsive, pensada para uso en computadora, tablet o celular.
 
 Panel de control administrativo para:
 
@@ -334,7 +338,6 @@ educacion-vial-imsj/
 
     ## Estructura del proyecto
     Ver carpeta /docs para documentación completa
-
 
 ## Apéndice 1: Consideraciones sobre agenda y datos personales
 
