@@ -15,7 +15,7 @@ Esta carpeta contendrá toda la información de los grupos de trabajo
 
   
 
-### Grupo 1 - [5 Integrantes]
+### Grupo 1 - [5 Integrantes] - Cobros socios club ciclista
 |Rol|Apellido|Nombre|
 |--|--|--|
 | Coordinador | Britos | Alex |  
@@ -24,7 +24,7 @@ Esta carpeta contendrá toda la información de los grupos de trabajo
 | Integrante 2| Jonathan| Lopez  |  
 | Integrante 3| Méndez | Bruno |  
 ---
-### Grupo 2 - [4 Integrantes]
+### Grupo 2 - [4 Integrantes] - Sistema bibloteca barrial
 |Rol|Apellido|Nombre|
 |--|--|--|
 | Coordinador | Saavedra| Mateo|  
@@ -32,7 +32,7 @@ Esta carpeta contendrá toda la información de los grupos de trabajo
 | Integrante 1| Cabrera| Maximiliano |  
 | Integrante 2| Roquero| Rodrigo|  
 ---
-### Grupo 3 - [5 Integrantes]
+### Grupo 3 - [5 Integrantes] - Proyecto educacion vial
 |Rol|Apellido|Nombre|
 |--|--|--|
 | Coordinador | Cabrera| Tomas|  
@@ -41,7 +41,7 @@ Esta carpeta contendrá toda la información de los grupos de trabajo
 | Integrante 2| Romero | Verónica|  
 | Integrante 3| Corrales| Vicente|  
 ---
-### Grupo 4 - [5 Integrantes]
+### Grupo 4 - [5 Integrantes] - Sistema gestion reclamos ciudadanos
 |Rol|Apellido|Nombre|
 |--|--|--|
 | Coordinador | Bonansea| Luca|  
@@ -50,7 +50,7 @@ Esta carpeta contendrá toda la información de los grupos de trabajo
 | Integrante 2| Pérez| Nicolas|  
 | Integrante 3| Carbajal| Thiago|  
 ---
-### Grupo 5 - [5 Integrantes]
+### Grupo 5 - [5 Integrantes] - Proyecto convenio INAU
 |Rol|Apellido|Nombre|
 |--|--|--|
 | Coordinador | Sanchez| Emiliano|  
@@ -59,7 +59,7 @@ Esta carpeta contendrá toda la información de los grupos de trabajo
 | Integrante 2| Viera| Ignacio|  
 | Integrante 3| Ferragut | Thiago|  
 ---
-### Grupo 6 - [3 Integrantes]
+### Grupo 6 - [3 Integrantes] - Sistema gestion distribucion material fotografico
 |Rol|Apellido|Nombre|
 |--|--|--|
 | Coordinador | Negretto | Nicolas|  
