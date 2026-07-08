@@ -1,5 +1,8 @@
 # Entrevistas con clientes
 
+## Emails para invitaciones
+Lemuel Swec: molkasproducciones@gmail.com
+
 ## Jueves 09/07/2026
 
 - 10:30 entrevista por proyecto club ciclista con Lemuel Swec (cliente y sponsor), plataforma Google Meet.
