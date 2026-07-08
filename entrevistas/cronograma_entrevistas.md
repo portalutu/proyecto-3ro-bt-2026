@@ -12,4 +12,4 @@
 
 - 10:30 entrevista con Lemuel Swec (cliente y sponsor), por proyecto plataforma gráfica, plataforma Google Meet.
 
-- <HORARIO A CONVENIR>, entrevista presencial con Andrea Valdez por proyecto de reclamos ciudadanos.
+- **HORARIO A CONVENIR**, entrevista presencial con Andrea Valdez por proyecto de reclamos ciudadanos.
