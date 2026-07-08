@@ -10,6 +10,6 @@
 
 ## Viernes 10/7:
 
-- 10:30 entrevista con Lemuel Swec (cliente y sponsor), por proyecto plataforma gráfica, plataforma Google Meet.
+- 10:30 entrevista con Lemuel Swec (cliente y sponsor), por proyecto plataforma distribución de material fotográfico, plataforma Google Meet.
 
 - **HORARIO A CONVENIR**, entrevista presencial con Andrea Valdez por proyecto de reclamos ciudadanos.
