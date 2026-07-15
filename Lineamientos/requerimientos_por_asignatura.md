@@ -29,4 +29,11 @@ La entrega final del proyecto deberá ser en medio impreso por asignatura, respa
 * Documentación de infraestructura (scripts, docker files, etc.)
 * Documentación para reconstrucción (documento descriptivo paso a paso para generar la infraestructura sugerida)
 
+## Electiva Ciberseguridad
+### Primera Entrega – Análisis y Diseño Seguro
+* Identificación de al menos 3 amenazas digitales relevantes al tipo de sistema (ej.: phishing, inyección SQL, fuga de datos, XSS, ransomware), con breve explicación del riesgo para el proyecto
+* Mapa de riesgos: esquema o gráfico que relacione partes del sistema con amenazas, más análisis de impacto técnico y sobre usuarios
+* Buenas prácticas de seguridad en desarrollo web: investigación y resumen aplicable al proyecto (sin copiar sin análisis), relacionado con las tecnologías usadas
+
+
 ## Formación Empresarial
