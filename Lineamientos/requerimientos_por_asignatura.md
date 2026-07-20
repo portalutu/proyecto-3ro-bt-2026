@@ -4,13 +4,32 @@
 La entrega final del proyecto deberá ser en medio impreso por asignatura, respaldado por la entrega de un medio físico (pendrive) conteniendo el código y la documentación accesoria.
 
 ## Ing. Software
+### Primera entrega
 * Project charter
-* Entrevistas (para proyectos reales)
+* Entrevistas (transcripciones, grabaciones, etc. con notas del equipo pre y post entrevistas)
+* Documentación de análisis del proyecto (requerimientos, épicas)
+* Actas de reuniones
+* Declaración de Etica en el uso de IA
+
+### Segunda entrega
+* Backlog (User Stories)
+* Estructura del repositorio
+* Actas de reuniones
+* Actas de Sprint Review
+* Documento control de cambios
+
+### Entrega final (versiones finales de todos los documentos)
+* Project charter
+* Entrevistas (notas del equipo pre y post entrevistas)
 * Documentación de análisis del proyecto (requerimientos, arquitectura)
 * Backlog (User Stories)
 * Estructura del repositorio
-* Burndown chart
+* Actas de reuniones
+* Actas de Sprint Review
+* Documento control de cambios
 * Acta de cierre
+* Declaración de Etica en el uso de IA
+* Manual de usuario (destinado a usuarios finales)
 
 ## Prog. Full-stack
 * Estructura del proyecto organizada en carpetas (frontend y backend separados)
@@ -22,12 +41,23 @@ La entrega final del proyecto deberá ser en medio impreso por asignatura, respa
 * Base de datos MySQL con schema definido (creación de tablas, relaciones y restricciones) mediante archivo .sql
 * Proyecto completamente dockerizado mediante archivo docker-compose.yml
 
-## Adm. SSOO
+## Adm. SSOO (versiones finales de todos los documentos)
+### Primera entrega
+* Análisis de requerimientos
+* Arquitectura propuesta
+
+### Segunda entrega
+* Justificación tecnológica
+* Documentación de infraestructura (scripts, docker files, etc.)
+* Documentación para reconstrucción (documento descriptivo paso a paso para generar la infraestructura sugerida)
+
+### Entrega final
 * Análisis de requerimientos
 * Arquitectura propuesta
 * Justificación tecnológica
 * Documentación de infraestructura (scripts, docker files, etc.)
 * Documentación para reconstrucción (documento descriptivo paso a paso para generar la infraestructura sugerida)
+* Backup completo del proyecto funcionando (docker + datos)
 
 ## Electiva Ciberseguridad
 ### Primera Entrega – Análisis y Diseño Seguro

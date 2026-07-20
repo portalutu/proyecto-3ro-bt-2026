@@ -16,10 +16,10 @@ posible calificación negativa. **No tendremos instancia de 3er avance de ENTREG
 ## Fechas Importantes
   
 
- - Primera Entrega:
- - Segunda Entrega:
- - Tercera Entrega:
-	 - Defensa del proyecto:
+ - Primera Entrega: 6 de Agosto de 2026
+ - Segunda Entrega: 10 se Septiembre de 2026
+ - Tercera Entrega: 15 de Octubre de 2026
+	 - Defensa del proyecto: **Fecha a establecer**
 
 En caso de fuerza mayor la entrega se realizará el próximo día hábil. Primera y segunda entrega se realizará en formato virtual debiendo entregar copia de toda la documentación en los espacios mencionados anteriormente mediante acuse de recibo. La entrega final se realizará en formato físico en el horario de clases de Utulab.
 
