@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formulario de Evaluación — Auditor de Presentación de Proyecto</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    background: #ffffff;
+    color: #000000;
+    font-family: Georgia, "Times New Roman", serif;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    line-height: 1.4;
+  }
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 4px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+  }
+  h2 {
+    font-size: 15px;
+    margin-top: 26px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 3px;
+  }
+  .instrucciones {
+    font-size: 12.5px;
+    margin: 10px 0 14px 0;
+  }
+  .escala {
+    font-size: 12.5px;
+    margin: 6px 0 14px 0;
+  }
+  .escala-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 22px;
+    list-style: none;
+    padding: 0;
+    margin: 6px 0;
+  }
+  .escala-lista li {
+    white-space: nowrap;
+  }
+  .datos-generales {
+    font-size: 13px;
+  }
+  .campo {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin: 10px 0;
+  }
+  .campo .etiqueta {
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .campo .linea {
+    flex: 1;
+    border-bottom: 1px solid #000;
+    min-width: 120px;
+    height: 1.1em;
+  }
+  .integrantes {
+    margin: 10px 0 4px 0;
+  }
+  .integrantes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 30px;
+    margin-top: 6px;
+  }
+  .integrante-item {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .integrante-item .num {
+    white-space: nowrap;
+  }
+  .integrante-item .linea {
+    flex: 1;
+    border-bottom: 1px solid #000;
+    height: 1.1em;
+  }
+  .item-block {
+    page-break-inside: avoid;
+    margin-bottom: 4px;
+  }
+  .descripcion {
+    font-size: 12.5px;
+    font-style: italic;
+    margin: 4px 0 8px 0;
+  }
+  .puntaje-row {
+    font-size: 13.5px;
+    font-weight: bold;
+    margin: 8px 0;
+  }
+  .casillas {
+    display: inline-flex;
+    gap: 18px;
+    margin-left: 6px;
+    font-weight: normal;
+  }
+  .casilla {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .box {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1.5px solid #000;
+    vertical-align: middle;
+  }
+  .comentarios-label {
+    font-size: 12.5px;
+    font-weight: bold;
+    margin: 8px 0 2px 0;
+  }
+  .comentarios-lineas {
+    margin-bottom: 4px;
+  }
+  .comentarios-lineas .linea-comentario {
+    border-bottom: 1px solid #000;
+    height: 20px;
+  }
+  .comentarios-lineas.tres .linea-comentario {
+    height: 20px;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 16px 0;
+  }
+  table.resumen {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  table.resumen th, table.resumen td {
+    border: 1px solid #000;
+    padding: 6px 8px;
+    text-align: left;
+  }
+  table.resumen th {
+    background: #ffffff;
+  }
+  table.resumen td.puntaje-cell {
+    width: 130px;
+    text-align: center;
+  }
+  .firma {
+    margin-top: 30px;
+    font-size: 13.5px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .firma .linea {
+    flex: 1;
+    border-bottom: 1px solid #000;
+    height: 1.1em;
+  }
+  @media print {
+    body { padding: 0; }
+    a { color: #000; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Formulario de Evaluación<br>Auditor de Presentación de Proyecto</h1>
+
+<p class="instrucciones">
+<strong>Instrucciones:</strong> este formulario debe ser completado por un docente auditor durante la presentación oral de la etapa inicial del proyecto. Todos los integrantes de cada grupo deben participar de la presentación y ser capaces de justificar cada ítem evaluado.
+</p>
+
+<div class="escala">
+<strong>Escala de valoración para cada ítem</strong> (marcar con una X la casilla correspondiente al puntaje otorgado):
+<ul class="escala-lista">
+  <li><span class="box"></span> 1 — Malo</li>
+  <li><span class="box"></span> 2 — Insuficiente</li>
+  <li><span class="box"></span> 3 — Aceptable</li>
+  <li><span class="box"></span> 4 — Bueno</li>
+  <li><span class="box"></span> 5 — Excelente</li>
+</ul>
+</div>
+
+<hr>
+
+<h2>Datos generales</h2>
+
+<div class="datos-generales">
+  <div class="campo"><span class="etiqueta">Grupo N.º:</span><span class="linea"></span></div>
+  <div class="campo"><span class="etiqueta">Nombre del proyecto:</span><span class="linea"></span></div>
+  <div class="campo"><span class="etiqueta">Fecha de la presentación:</span><span class="linea"></span></div>
+  <div class="campo"><span class="etiqueta">Docente auditor:</span><span class="linea"></span></div>
+
+  <div class="integrantes">
+    <strong>Integrantes presentes:</strong>
+    <div class="integrantes-grid">
+      <div class="integrante-item"><span class="num">1.</span><span class="linea"></span></div>
+      <div class="integrante-item"><span class="num">2.</span><span class="linea"></span></div>
+      <div class="integrante-item"><span class="num">3.</span><span class="linea"></span></div>
+      <div class="integrante-item"><span class="num">4.</span><span class="linea"></span></div>
+      <div class="integrante-item"><span class="num">5.</span><span class="linea"></span></div>
+      <div class="integrante-item"><span class="num">6.</span><span class="linea"></span></div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- ITEM 1 -->
+<div class="item-block">
+  <h2>1. Presentación del proyecto</h2>
+  <p class="descripcion">Claridad, organización y participación equitativa del grupo en la exposición general.</p>
+  <div class="puntaje-row">Puntaje:
+    <span class="casillas">
+      <span class="casilla"><span class="box"></span>1</span>
+      <span class="casilla"><span class="box"></span>2</span>
+      <span class="casilla"><span class="box"></span>3</span>
+      <span class="casilla"><span class="box"></span>4</span>
+      <span class="casilla"><span class="box"></span>5</span>
+    </span>
+  </div>
+  <p class="comentarios-label">Comentarios del auditor:</p>
+  <div class="comentarios-lineas tres">
+    <div class="linea-comentario"></div>
+    <div class="linea-comentario"></div>
+  </div>
+</div>
+<hr>
+
+<!-- ITEM 2 -->
+<div class="item-block">
+  <h2>2. Letra inicial del proyecto (necesidad identificada)</h2>
+  <p class="descripcion">Comprensión y correcta interpretación de la necesidad planteada en la letra inicial.</p>
+  <div class="puntaje-row">Puntaje:
+    <span class="casillas">
+      <span class="casilla"><span class="box"></span>1</span>
+      <span class="casilla"><span class="box"></span>2</span>
+      <span class="casilla"><span class="box"></span>3</span>
+      <span class="casilla"><span class="box"></span>4</span>
+      <span class="casilla"><span class="box"></span>5</span>
+    </span>
+  </div>
+  <p class="comentarios-label">Comentarios del auditor:</p>
+  <div class="comentarios-lineas tres">
+    <div class="linea-comentario"></div>
+    <div class="linea-comentario"></div>
+  </div>
+</div>
+<hr>
+
+<!-- ITEM 3 -->
+<div class="item-block">
+  <h2>3. Análisis de la letra e identificación de faltantes o dudas</h2>
+  <p class="descripcion">Capacidad del grupo para detectar información faltante o ambigua en la letra que dificulte el análisis y la estimación correcta del trabajo.</p>
+  <div class="puntaje-row">Puntaje:
+    <span class="casillas">
+      <span class="casilla"><span class="box"></span>1</span>
+      <span class="casilla"><span class="box"></span>2</span>
+      <span class="casilla"><span class="box"></span>3</span>
+      <span class="casilla"><span class="box"></span>4</span>
+      <span class="casilla"><span class="box"></span>5</span>
+    </span>
+  </div>
+  <p class="comentarios-label">Comentarios del auditor:</p>
+  <div class="comentarios-lineas tres">
+    <div class="linea-comentario"></div>
+    <div class="linea-comentario"></div>
+  </div>
+</div>
+<hr>
+
+<!-- ITEM 4 -->
+<div class="item-block">
+  <h2>4. Resultados de la entrevista con el cliente</h2>
+  <p class="descripcion">Calidad de las preguntas realizadas, información relevada y su uso para reducir las dudas detectadas en la letra.</p>
+  <div class="puntaje-row">Puntaje:
+    <span class="casillas">
+      <span class="casilla"><span class="box"></span>1</span>
+      <span class="casilla"><span class="box"></span>2</span>
+      <span class="casilla"><span class="box"></span>3</span>
+      <span class="casilla"><span class="box"></span>4</span>
+      <span class="casilla"><span class="box"></span>5</span>
+    </span>
+  </div>
+  <p class="comentarios-label">Comentarios del auditor:</p>
+  <div class="comentarios-lineas tres">
+    <div class="linea-comentario"></div>
+    <div class="linea-comentario"></div>
+  </div>
+</div>
+<hr>
+
+<!-- ITEM 5 -->
+<div class="item-block">
+  <h2>5. Nombre de la solución</h2>
+  <p class="descripcion">Pertinencia y justificación del nombre elegido para la solución propuesta.</p>
+  <div class="puntaje-row">Puntaje:
+    <span class="casillas">
+      <span class="casilla"><span class="box"></span>1</span>
+      <span class="casilla"><span class="box"></span>2</span>
+      <span class="casilla"><span class="box"></span>3</span>
+      <span class="casilla"><span class="box"></span>4</span>
+      <span class="casilla"><span class="box"></span>5</span>
+    </span>
+  </div>
+  <p class="comentarios-label">Comentarios del auditor:</p>
+  <div class="comentarios-lineas tres">
+    <div class="linea-comentario"></div>
+    <div class="linea-comentario"></div>
+  </div>
+</div>
+<hr>
+
+<!-- ITEM 6 -->
+<div class="item-block">
+  <h2>6. Alcance incluido y excluido</h2>
+  <p class="descripcion">Claridad y coherencia en la delimitación de lo que el proyecto abarca y de lo que queda explícitamente fuera de alcance.</p>
+  <div class="puntaje-row">Puntaje:
+    <span class="casillas">
+      <span class="casilla"><span class="box"></span>1</span>
+      <span class="casilla"><span class="box"></span>2</span>
+      <span class="casilla"><span class="box"></span>3</span>
+      <span class="casilla"><span class="box"></span>4</span>
+      <span class="casilla"><span class="box"></span>5</span>
+    </span>
+  </div>
+  <p class="comentarios-label">Comentarios del auditor:</p>
+  <div class="comentarios-lineas tres">
+    <div class="linea-comentario"></div>
+    <div class="linea-comentario"></div>
+  </div>
+</div>
+<hr>
+
+<!-- ITEM 7 -->
+<div class="item-block">
+  <h2>7. Requerimientos funcionales y no funcionales detectados</h2>
+  <p class="descripcion">Correcta identificación, clasificación y justificación de los requerimientos relevados.</p>
+  <div class="puntaje-row">Puntaje:
+    <span class="casillas">
+      <span class="casilla"><span class="box"></span>1</span>
+      <span class="casilla"><span class="box"></span>2</span>
+      <span class="casilla"><span class="box"></span>3</span>
+      <span class="casilla"><span class="box"></span>4</span>
+      <span class="casilla"><span class="box"></span>5</span>
+    </span>
+  </div>
+  <p class="comentarios-label">Comentarios del auditor:</p>
+  <div class="comentarios-lineas tres">
+    <div class="linea-comentario"></div>
+    <div class="linea-comentario"></div>
+  </div>
+</div>
+<hr>
+
+<!-- ITEM 8 -->
+<div class="item-block">
+  <h2>8. Épicas (primera versión) derivadas de los requerimientos</h2>
+  <p class="descripcion">Coherencia entre las épicas presentadas y los requerimientos identificados, y nivel de justificación de su formulación.</p>
+  <div class="puntaje-row">Puntaje:
+    <span class="casillas">
+      <span class="casilla"><span class="box"></span>1</span>
+      <span class="casilla"><span class="box"></span>2</span>
+      <span class="casilla"><span class="box"></span>3</span>
+      <span class="casilla"><span class="box"></span>4</span>
+      <span class="casilla"><span class="box"></span>5</span>
+    </span>
+  </div>
+  <p class="comentarios-label">Comentarios del auditor:</p>
+  <div class="comentarios-lineas tres">
+    <div class="linea-comentario"></div>
+    <div class="linea-comentario"></div>
+  </div>
+</div>
+<hr>
+
+<h2>Comentarios generales del auditor</h2>
+<div class="comentarios-lineas">
+  <div class="linea-comentario"></div>
+  <div class="linea-comentario"></div>
+  <div class="linea-comentario"></div>
+</div>
+
+<hr>
+
+<h2>Resumen de puntajes</h2>
+<table class="resumen">
+  <thead>
+    <tr><th>Ítem</th><th>Puntaje (1-5)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1. Presentación del proyecto</td><td class="puntaje-cell"></td></tr>
+    <tr><td>2. Letra inicial (necesidad identificada)</td><td class="puntaje-cell"></td></tr>
+    <tr><td>3. Análisis de faltantes o dudas en la letra</td><td class="puntaje-cell"></td></tr>
+    <tr><td>4. Resultados de la entrevista con el cliente</td><td class="puntaje-cell"></td></tr>
+    <tr><td>5. Nombre de la solución</td><td class="puntaje-cell"></td></tr>
+    <tr><td>6. Alcance incluido y excluido</td><td class="puntaje-cell"></td></tr>
+    <tr><td>7. Requerimientos funcionales y no funcionales</td><td class="puntaje-cell"></td></tr>
+    <tr><td>8. Épicas (primera versión)</td><td class="puntaje-cell"></td></tr>
+    <tr><td><strong>Total</strong></td><td class="puntaje-cell"></td></tr>
+  </tbody>
+</table>
+
+<div class="firma">
+  <span><strong>Firma del auditor:</strong></span>
+  <span class="linea"></span>
+</div>
+
+</body>
+</html>
