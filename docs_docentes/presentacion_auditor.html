@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigo Money Cazard - Auditor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #1a3a52;
+            --accent-gold: #d4af37;
+            --metal-gray: #7a8a96;
+            --bg-light: #0f1419;
+            --text-dark: #e8ecf0;
+            --warning-red: #b53c3c;
+            --ice-blue: #1f3a4a;
+            --border-color: #3a4a5a;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Georgia, serif;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-dark: #2a4a62;
+                --bg-light: #1a2332;
+                --text-dark: #e8ecf0;
+                --border-color: #3a4a5a;
+                --ice-blue: #1f3a4a;
+            }
+        }
+
+        :root[data-theme="dark"] {
+            --primary-dark: #2a4a62;
+            --bg-light: #1a2332;
+            --text-dark: #e8ecf0;
+            --border-color: #3a4a5a;
+            --ice-blue: #1f3a4a;
+        }
+
+        :root[data-theme="light"] {
+            --primary-dark: #1a3a52;
+            --bg-light: #f8f9fa;
+            --text-dark: #2c3e50;
+            --border-color: #d0d8e0;
+            --ice-blue: #e8f1f7;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--primary-dark), #2a4a6a);
+            border-radius: 12px;
+            color: white;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(216, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(232, 241, 247, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -1px;
+            font-family: Georgia, serif;
+            background: linear-gradient(135deg, #b3d9ff 0%, #e8f1f7 50%, #b3d9ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(179, 217, 255, 0.3), 0 0 60px rgba(100, 180, 255, 0.15);
+            filter: drop-shadow(0 0 20px rgba(179, 217, 255, 0.4)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--accent-gold);
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .nickname {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        .card {
+            background: #1e2d3d;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--accent-gold);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-left: 5px solid var(--accent-gold);
+            box-shadow: 0 8px 24px rgba(179, 217, 255, 0.15), 0 4px 8px rgba(0, 0, 0, 0.4);
+            position: relative;
+            transition: box-shadow 0.3s ease;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .card {
+                background: #1e2d3d;
+                box-shadow: 0 8px 24px rgba(179, 217, 255, 0.15), 0 4px 8px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        :root[data-theme="dark"] .card {
+            background: #1e2d3d;
+            box-shadow: 0 8px 24px rgba(179, 217, 255, 0.15), 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(26, 58, 82, 0.15);
+        }
+
+        .card.warning {
+            border-left-color: var(--warning-red);
+            background: linear-gradient(135deg, rgba(181, 60, 60, 0.03), transparent);
+        }
+
+        .card-icon {
+            position: absolute;
+            top: -15px;
+            right: 2rem;
+            font-size: 2.5rem;
+            opacity: 0.3;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+            font-family: Georgia, serif;
+            font-weight: 600;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .card h2 {
+                color: #ffd9a3;
+            }
+        }
+
+        :root[data-theme="dark"] .card h2 {
+            color: #ffd9a3;
+        }
+
+        .card h3 {
+            font-size: 1rem;
+            color: var(--metal-gray);
+            font-weight: 500;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .detail-item {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--accent-gold);
+            line-height: 1.6;
+        }
+
+        .label {
+            font-weight: 600;
+            color: #ffd9a3;
+            display: inline;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .label {
+                color: #ffd9a3;
+            }
+        }
+
+        :root[data-theme="dark"] .label {
+            color: #ffd9a3;
+        }
+
+        .value {
+            color: #e8ecf0;
+            font-family: Georgia, serif;
+            font-style: italic;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card ul li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+            border-left: 2px solid var(--accent-gold);
+            padding-left: 1.5rem;
+        }
+
+        .card ul li::before {
+            content: '▪';
+            position: absolute;
+            left: -8px;
+            color: var(--accent-gold);
+            font-size: 0.8rem;
+        }
+
+        .motto {
+            font-size: 1.8rem;
+            font-style: italic;
+            font-family: Georgia, serif;
+            color: var(--accent-gold);
+            text-align: center;
+            padding: 1.5rem;
+            border-top: 2px solid var(--accent-gold);
+            border-bottom: 2px solid var(--accent-gold);
+            margin: 2rem 0;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .data-item {
+            padding: 1.5rem;
+            background: rgba(42, 74, 98, 0.5);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-gold);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-left: 3px solid var(--accent-gold);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .data-item {
+                background: rgba(42, 74, 98, 0.5);
+            }
+        }
+
+        :root[data-theme="dark"] .data-item {
+            background: rgba(42, 74, 98, 0.5);
+        }
+
+        .data-item strong {
+            color: #b3d9ff;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .data-item strong {
+                color: #b3d9ff;
+            }
+        }
+
+        :root[data-theme="dark"] .data-item strong {
+            color: #b3d9ff;
+        }
+
+        .data-item span {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            font-family: Georgia, serif;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .data-item span {
+                color: #ffffff;
+            }
+        }
+
+        :root[data-theme="dark"] .data-item span {
+            color: #ffffff;
+        }
+
+        .warning-box {
+            background: rgba(181, 60, 60, 0.08);
+            border-left: 4px solid var(--warning-red);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .warning-box {
+                background: rgba(181, 60, 60, 0.1);
+            }
+        }
+
+        :root[data-theme="dark"] .warning-box {
+            background: rgba(181, 60, 60, 0.1);
+        }
+
+        .warning-box strong {
+            color: var(--warning-red);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .ice-decoration {
+            display: inline-block;
+            margin: 0 0.5rem;
+            opacity: 0.4;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .data-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            header {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            color: var(--metal-gray);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-gold), transparent);
+            margin: 3rem 0;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rodrigo Money Cazard</h1>
+        <p class="subtitle">Auditor 🔍</p>
+        <p class="nickname">❝Sr. Negocios❞ — Inquisidor General</p>
+    </header>
+
+    <section class="card">
+        <div class="card-icon">💼</div>
+        <h2>El Auditor</h2>
+        <div class="detail-item">
+            <span class="label">Cargo oficial:</span>
+            <span class="value">Inquisidor General</span><br>
+            <small>(pero prefiere que le digan <strong>auditor</strong>)</small>
+        </div>
+        <div class="detail-item">
+            <span class="label">Apodo amigable:</span>
+            <span class="value">Sr. Negocios</span>
+        </div>
+        <div class="motto">
+            "Todo son negocios" 💰
+        </div>
+        <div class="detail-item">
+            <span class="label">Frase motivacional:</span>
+            <span class="value">❝Si el dinero no te dá la felicidad, es porque no tienes suficiente❞</span>
+        </div>
+    </section>
+
+    <section class="card">
+        <div class="card-icon">📺</div>
+        <h2>Influencias & Admiración</h2>
+        <div class="data-grid">
+            <div class="data-item">
+                <strong>Serie preferida</strong>
+                <span>Billions</span>
+            </div>
+            <div class="data-item">
+                <strong>Admira</strong>
+                <span>Warren Buffet</span>
+            </div>
+        </div>
+        <div class="detail-item" style="margin-top: 1.5rem;">
+            <span class="label">Lo que le molesta:</span>
+            <span class="value">❝Money for nothing❞ — Dinero sin propósito</span>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <section class="card">
+        <div class="card-icon">📊</div>
+        <h2>Qué Esperar de su Actuación</h2>
+        <ul>
+            <li>
+                <strong>Análisis total y absoluto</strong> de cada proyecto e integrante del equipo
+            </li>
+            <li>
+                Examina cada palabra en forma <strong>fría y calculadora</strong>
+            </li>
+            <li>
+                Evalúa constantemente <strong>ganancias y pérdidas</strong> en cada momento
+            </li>
+        </ul>
+        <p style="margin-top: 1.5rem; padding: 1.5rem; background: var(--ice-blue); border-radius: 8px; font-size: 0.95rem;">
+            <span class="ice-decoration">❄️</span>
+            Su mentalidad es <strong>precisa, implacable y orientada a resultados financieros</strong>. No hay emoción que justifique una decisión, solo números.
+        </p>
+    </section>
+
+    <section class="card warning">
+        <div class="card-icon">⚠️</div>
+        <h2>Precauciones</h2>
+        <div class="warning-box">
+            <strong>Señal de alerta #1: Informalidad</strong>
+            <p>Si lo ven vestido de manera informal, <strong>estén de guardia baja</strong> — es una estrategia.</p>
+        </div>
+        <div class="warning-box">
+            <strong>Señal de alerta #2: Sonrisas</strong>
+            <p>Si <strong>sonríe</strong>, algo está mal.<br>
+            Si lo notan <strong>cordial y distendido</strong>... algo va <strong>muy mal</strong>.</p>
+        </div>
+        <p style="margin-top: 1.5rem; font-size: 0.9rem; font-style: italic; color: var(--warning-red);">
+            El auditor no improvisa. Cada gesto es calculado. <span class="ice-decoration">🧊</span>
+        </p>
+    </section>
+
+    <footer>
+        <p>Presentación del Personaje — Auditor Financiero</p>
+        <p style="margin-top: 0.5rem; opacity: 0.7;">Todo son negocios. Siempre. 📈</p>
+    </footer>
+</body>
+</html>
