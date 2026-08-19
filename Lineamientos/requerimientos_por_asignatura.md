@@ -65,5 +65,17 @@ La entrega final del proyecto deberá ser en medio impreso por asignatura, respa
 * Mapa de riesgos: esquema o gráfico que relacione partes del sistema con amenazas, más análisis de impacto técnico y sobre usuarios
 * Buenas prácticas de seguridad en desarrollo web: investigación y resumen aplicable al proyecto (sin copiar sin análisis), relacionado con las tecnologías usadas
 
+### Segunda Entrega – Implementación Segura, Criptografía y Aspectos Legales
+* Implementación de Mecanismos de Autenticación y Criptografía (Hashing de Contraseñas, Gestión de Sesiones / Tokens de API)
+* Términos y Condiciones & Política de Privacidad (Marco Legal)
+* Análisis Estático de Código (SAST) - Entregable: Captura de pantalla de los hallazgos y evidencias de la refactorización/corrección del código por motivos de seguridad.
+* Hardening de Infraestructura y Contenedores (Sincronizado con SSOO)
+
+### Tercera Entrega – Hacking Ético, Pruebas Automatizadas y Respuesta a Incidentes
+* Análisis Dinámico de Vulnerabilidades Web (DAST) (OWASP ZAP, Nmap)
+* Auditoría Automatizada de la API REST (Script Bash de Pruebas de Seguridad)
+* Registro de Hallazgos y Medidas Correctivas Finales
+* Plan de Respuesta a Incidentes
+* Reflexión Ética
 
 ## Formación Empresarial
